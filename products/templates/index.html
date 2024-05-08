@@ -1,0 +1,23 @@
+{%extends 'theme.html' %}
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{%static 'style.css' %}">
+<div class="container">
+  <div class="row">
+    {% for x in example%}
+    <div class="col-md-3">
+<div class="card" style="width: 18rem;">
+  <img src="{{x.image}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{x.name}}</h5>
+    <p class="card-text">{{x.price}}</p>
+    <p class="card-text">{{x.stock}}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    {% endfor%}
+    </div>
+  </div>
+{% endblock %}
